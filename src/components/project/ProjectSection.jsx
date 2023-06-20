@@ -1,13 +1,12 @@
 import { SectionWrapper } from '../atom/SectionWrapper';
 import { Project } from './Project';
-import { GITHUB_USERNAME } from './../../lib/config';
 import { getListOfUrlRepositoriesUrl } from '../../lib/api-url';
 import { Loader } from '../atom/Loader/Loader';
 import { useFetch } from '../../hooks/useFetch';
 
 
 export const ProjectSection = () => {
-  const {status, data: projects, error} = useFetch(getListOfUrlRepositoriesUrl(GITHUB_USERNAME));
+  const {status, data: projects, error} = useFetch(getListOfUrlRepositoriesUrl("tacosougrecDEV"));
   if(status === "pending" || status === "idle"){
     return <Loader/>
   }
