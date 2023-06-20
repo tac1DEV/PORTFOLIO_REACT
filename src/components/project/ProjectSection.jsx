@@ -13,6 +13,7 @@ export const ProjectSection = () => {
   }
 
   if(error){
+    console.log(GITHUB_USERNAME);
     return <p>Error !</p>
   }
 
