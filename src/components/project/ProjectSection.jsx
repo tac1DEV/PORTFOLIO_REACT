@@ -3,10 +3,11 @@ import { Project } from './Project';
 import { getListOfUrlRepositoriesUrl } from '../../lib/api-url';
 import { Loader } from '../atom/Loader/Loader';
 import { useFetch } from '../../hooks/useFetch';
+import { GITHUB_USERNAME } from './../../lib/config';
 
 
 export const ProjectSection = () => {
-  const {status, data: projects, error} = useFetch(getListOfUrlRepositoriesUrl("tacosougrecDEV"));
+  const {status, data: projects, error} = useFetch(getListOfUrlRepositoriesUrl(GITHUB_USERNAME));
   if(status === "pending" || status === "idle"){
     return <Loader/>
   }
