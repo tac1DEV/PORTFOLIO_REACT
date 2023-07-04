@@ -3,7 +3,7 @@ import { Draw } from './Draw';
 
 export const DrawSection = () => {
   return (
-    <SectionWrapper>
+    <SectionWrapper >
       <Draw />
     </SectionWrapper>
   );
