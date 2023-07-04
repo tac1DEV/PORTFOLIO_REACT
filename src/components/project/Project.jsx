@@ -11,7 +11,7 @@ export const Project = ({ name, description, stargazerCount, url, homepageUrl })
       </a>
       <Typography variant="body1">{description}</Typography>
       {homepageUrl ? (
-        <a className="underline text-primary" href={homepageUrl}>
+        <a className="underline text-primary" href={homepageUrl} target="_blank" rel="noreferrer">
           {homepageUrl.replace('https://', '')}
         </a>
       ) : null}
