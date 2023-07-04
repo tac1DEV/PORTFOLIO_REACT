@@ -45,5 +45,9 @@ a:hover {
   .draw{
     display:none;
   }
+
+  .text-6xl{
+    font-size: 3.6rem;
+  }
 }
 
