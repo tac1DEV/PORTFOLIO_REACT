@@ -41,7 +41,7 @@ a:hover {
   @apply underline;
 }
 
-@media only screen{
+@media screen and (max-width: 500px){
   .draw{
     display:none;
   }
