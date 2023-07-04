@@ -4,8 +4,6 @@ import { getListOfUrlRepositoriesUrl } from '../../lib/api-url';
 import { Loader } from '../atom/Loader/Loader';
 import { useFetch } from '../../hooks/useFetch';
 import { GITHUB_USERNAME } from './../../lib/config';
-import {data} from '../../hooks/useFetch'
-
 
 export const ProjectSection = () => {
   const {status, data: projects, error} = useFetch(getListOfUrlRepositoriesUrl(GITHUB_USERNAME));
@@ -13,9 +11,8 @@ export const ProjectSection = () => {
     return <Loader/>
   }
 
-  console.log(data);
   if(error){
-    return <p>Error !</p>
+    return <p>Error ! + {error}</p>
   }
 
   return (
